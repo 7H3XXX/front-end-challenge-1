@@ -49,7 +49,7 @@ In this project i learned how to use CSS grid to make a simple layout that adapt
   <img src="url_to_your_image"/> <!-- Very important ! Otherwise the image won't render -->
 </picture>
 ```
-With this we basically tell the browser to load the image based on the size of the screen. In this case For screen sizes under 640px it's the default image (in the ```html <img/>``` tag) that will be displayed.
+With this we basically tell the browser to load the image based on the size of the screen. In this case For screen sizes under 640px it's the default image (in the ```<img/>``` tag) that will be displayed.
 
 ### Useful resources
 
