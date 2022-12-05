@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://7h3xxx.github.io/front-end-challenge-1/)
+- Live Site URL: [View site](https://7h3xxx.github.io/front-end-challenge-1/)
 
 ## My process
 
