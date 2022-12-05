@@ -1,53 +1,141 @@
 /* CSS reset */
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
+
 html, body {
   height: 100%;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
+
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
-/*
-  6. Improve media defaults
-*/
+
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
-/*
-  7. Remove built-in form typography styles
-*/
+
 input, button, textarea, select {
   font: inherit;
 }
-/*
-  8. Avoid text overflows
-*/
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-/*
-  9. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+
+/* End reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
+
+
+:root{
+   --primary-dark-cyan: hsl(158, 36%, 37%);
+   --primary-cream: hsl(30, 38%, 92%);
+   --neutral-very-dark-blue: hsl(212, 21%, 14%);--neutral-fark-grayish-blue: hsl(228, 12%, 48%);--neutral-white: hsl(0, 0%, 100%);
+}
+
+body{
+    width: 100%;
+    background-color: var(--primary-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product{
+    background-color: var(--neutral-white);
+    border-radius: 8px;
+    margin: 2em;
+    overflow: hidden;
+    max-width: 23em;
+
+}
+
+.product__img{
+    object-fit: cover;
+}
+
+.product__description--category{
+    text-transform: uppercase;
+    font-size: small;
+    letter-spacing: 0.25rem;
+}
+
+.product__description--category, .product__description--price-old, .product__description--details{
+    color: var(--neutral-fark-grayish-blue);
+}
+
+.product__description--title, .product__description--price-new{
+    font-family: 'Fraunces', serif;
+    font-size: xx-large;
+}
+
+.product__description--title{
+    line-height: 2rem;
+}
+
+.product__description--price{
+    display: inline-flex;
+    align-items: center;
+}
+
+.product__description--price-old{
+    margin-left: 1rem;
+    font-size: small;
+}
+
+.product__description--price-new{
+    color: var(--primary-dark-cyan);
+}
+
+.product__description{
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.product__description--details{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.product__description__button{
+    border: none;
+    background-color: var(--primary-dark-cyan);
+    border-radius: 8px;
+    padding: 0.825em;
+    color: var(--neutral-white);
+    font-weight: 800;
+    font-size: small;
+}
+
+.product__description__button:hover{
+    background-color: rgb(26, 64, 49);
+    cursor: pointer;
+}
+
+.product__description__button::before{
+    content: url(../images/icon-cart.svg);
+    position: relative;
+    left: -10px;
+    top: 3px;
+}
+
+@media screen and (min-width: 640px) {
+    .product{
+        display: grid;
+        max-width: 34em;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
