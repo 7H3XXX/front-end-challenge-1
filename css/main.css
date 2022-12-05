@@ -137,5 +137,8 @@ body{
         max-width: 34em;
         grid-template-columns: 1fr 1fr;
     }
+    .product__img{
+      height: 100%;
+    }
 
 }
